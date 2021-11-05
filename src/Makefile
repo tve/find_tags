@@ -10,12 +10,19 @@
 ## PRODUCTION FLAGS:
 CPPFLAGS=-Wall  -O3 -std=c++0x $(PROFILING) -Wno-psabi
 LDFLAGS=-lsqlite3
-CXX=g++
+CXX?=g++
+STRIP?=strip
+DESTDIR?=/
 
 all: find_tags_unifile
 
 clean:
 	rm -f *.o find_tags find_tags_unifile
+
+install: find_tags_unifile
+	$(STRIP) find_tags_unifile
+	install -d $(DESTDIR)/usr/bin
+	install -m 755 find_tags_unifile $(DESTDIR)/usr/bin/find_tags
 
 Freq_Setting.o: Freq_Setting.cpp Freq_Setting.hpp find_tags_common.hpp
 

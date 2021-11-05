@@ -1,0 +1,8 @@
+Package: find-tags-unifile
+Version: 0.6
+Architecture: armhf
+Essential: no
+Depends: 
+Homepage: https://github.com/sensorgnome/find_tags
+Maintainer: TvE (tvoneicken@gmail.com)
+Description: Sensorgnome software to filter Lotek tags from a raw datastream.

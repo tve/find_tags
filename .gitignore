@@ -1,0 +1,5 @@
+build-temp/
+packages/
+*.o
+sensorgnome-dockcross
+src/find_tags_unifile

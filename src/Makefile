@@ -22,7 +22,7 @@ clean:
 install: find_tags_unifile
 	$(STRIP) find_tags_unifile
 	install -d $(DESTDIR)/usr/bin
-	install -m 755 find_tags_unifile $(DESTDIR)/usr/bin/find_tags
+	install -m 755 find_tags_unifile $(DESTDIR)/usr/bin
 
 Freq_Setting.o: Freq_Setting.cpp Freq_Setting.hpp find_tags_common.hpp
 
